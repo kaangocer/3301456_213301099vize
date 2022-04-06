@@ -42,63 +42,56 @@ class govdekismi extends StatelessWidget {
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Color.fromARGB(255, 255, 255, 255),
-                    ),
-                    child: Text("Tümü", style: TextStyle(color: Colors.black)),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => AnaSayfa()),
-                      );
-                    },
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Color.fromARGB(255, 255, 255, 255),
                   ),
+                  child: Text("Tümü", style: TextStyle(color: Colors.black)),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => AnaSayfa()),
+                    );
+                  },
                 ),
               ),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Color.fromARGB(255, 255, 255, 255),
-                    ),
-                    child: Text("Balik", style: TextStyle(color: Colors.black)),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => balikliMamalar()),
-                      );
-                    },
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Color.fromARGB(255, 255, 255, 255),
                   ),
+                  child: Text("Balik", style: TextStyle(color: Colors.black)),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => balikliMamalar()),
+                    );
+                  },
                 ),
               ),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Color.fromARGB(255, 255, 255, 255),
-                    ),
-                    child: Text("Tavuk", style: TextStyle(color: Colors.black)),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => tavukluMamalar()),
-                      );
-                    },
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Color.fromARGB(255, 255, 255, 255),
                   ),
+                  child: Text("Tavuk", style: TextStyle(color: Colors.black)),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => tavukluMamalar()),
+                    );
+                  },
                 ),
               ),
             ],
           ),
         ),
         Expanded(
+          flex: 3,
           child: SingleChildScrollView(
             reverse: true,
             child: Padding(
@@ -109,82 +102,100 @@ class govdekismi extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Container(
-                        margin: EdgeInsets.all(5),
-                        height: 200,
-                        width: 150,
-                        child: Column(
-                          children: [
-                            Image.asset(
-                              "lib/resimler/kedimamasi/acana.jpg",
-                              fit: BoxFit.cover,
-                            ),
-                            Text("Acana Kedi Mamaları"),
-                            Row(
-                              children: [
-                                Expanded(
-                                    flex: 1,
-                                    child: Icon(FontAwesomeIcons.solidHeart,
-                                        size: 20)),
-                                Expanded(
-                                  flex: 4,
-                                  child: ElevatedButton(
-                                    style: ElevatedButton.styleFrom(
-                                      primary: Color.fromARGB(255, 170, 77, 19),
-                                    ),
-                                    child: Container(
-                                      height: 12,
-                                      width: 40,
-                                      child: Text(
-                                        "Hepsi",
-                                        style: TextStyle(fontSize: 10),
+                      Expanded(
+                        child: Container(
+                          height: 200,
+                          margin: EdgeInsets.all(5),
+                          child: Column(
+                            children: [
+                              Expanded(
+                                flex: 5,
+                                child: Image.asset(
+                                  "lib/resimler/kedimamasi/acana.jpg",
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              Expanded(
+                                  flex: 1, child: Text("Acana Kedi Mamaları")),
+                              Expanded(
+                                flex: 1,
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                        flex: 1,
+                                        child: Icon(FontAwesomeIcons.solidHeart,
+                                            size: 20)),
+                                    Expanded(
+                                      flex: 4,
+                                      child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          primary:
+                                              Color.fromARGB(255, 170, 77, 19),
+                                        ),
+                                        child: Container(
+                                          height: 12,
+                                          width: 40,
+                                          child: Text(
+                                            "Hepsi",
+                                            style: TextStyle(fontSize: 10),
+                                          ),
+                                        ),
+                                        onPressed: () {},
                                       ),
                                     ),
-                                    onPressed: () {},
-                                  ),
+                                  ],
                                 ),
-                              ],
-                            )
-                          ],
+                              )
+                            ],
+                          ),
                         ),
                       ),
-                      Container(
-                        margin: EdgeInsets.all(5),
-                        height: 200,
-                        width: 150,
-                        child: Column(
-                          children: [
-                            Image.asset(
-                              "lib/resimler/kedimamasi/nd.jpg",
-                              fit: BoxFit.cover,
-                            ),
-                            Text("N&D Kedi Mamaları"),
-                            Row(
-                              children: [
-                                Expanded(
-                                    flex: 1,
-                                    child: Icon(FontAwesomeIcons.solidHeart,
-                                        size: 20)),
-                                Expanded(
-                                  flex: 4,
-                                  child: ElevatedButton(
-                                    style: ElevatedButton.styleFrom(
-                                      primary: Color.fromARGB(255, 170, 77, 19),
-                                    ),
-                                    child: Container(
-                                      height: 12,
-                                      width: 40,
-                                      child: Text(
-                                        "Hepsi",
-                                        style: TextStyle(fontSize: 10),
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.all(5),
+                          height: 200,
+                          child: Column(
+                            children: [
+                              Expanded(
+                                flex: 5,
+                                child: Image.asset(
+                                  "lib/resimler/kedimamasi/nd.jpg",
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              Expanded(
+                                  flex: 1, child: Text("N&D Kedi Mamaları")),
+                              Expanded(
+                                flex: 1,
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                        flex: 1,
+                                        child: Icon(FontAwesomeIcons.solidHeart,
+                                            size: 20)),
+                                    Expanded(
+                                      flex: 4,
+                                      child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          primary:
+                                              Color.fromARGB(255, 170, 77, 19),
+                                        ),
+                                        child: Container(
+                                          height: 12,
+                                          width: 40,
+                                          child: Text(
+                                            "Hepsi",
+                                            style: TextStyle(fontSize: 10),
+                                          ),
+                                        ),
+                                        onPressed: () {},
                                       ),
                                     ),
-                                    onPressed: () {},
-                                  ),
+                                  ],
                                 ),
-                              ],
-                            )
-                          ],
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ],
@@ -193,82 +204,304 @@ class govdekismi extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Container(
-                        margin: EdgeInsets.all(5),
-                        height: 200,
-                        width: 150,
-                        child: Column(
-                          children: [
-                            Image.asset(
-                              "lib/resimler/kedimamasi/proplan.jpg",
-                              fit: BoxFit.cover,
-                            ),
-                            Text("Pro Plan Kedi Mamaları"),
-                            Row(
-                              children: [
-                                Expanded(
-                                    flex: 1,
-                                    child: Icon(FontAwesomeIcons.solidHeart,
-                                        size: 20)),
-                                Expanded(
-                                  flex: 4,
-                                  child: ElevatedButton(
-                                    style: ElevatedButton.styleFrom(
-                                      primary: Color.fromARGB(255, 170, 77, 19),
-                                    ),
-                                    child: Container(
-                                      height: 12,
-                                      width: 40,
-                                      child: Text(
-                                        "Hepsi",
-                                        style: TextStyle(fontSize: 10),
+                      Expanded(
+                        child: Container(
+                          height: 200,
+                          margin: EdgeInsets.all(5),
+                          child: Column(
+                            children: [
+                              Expanded(
+                                flex: 5,
+                                child: Image.asset(
+                                  "lib/resimler/kedimamasi/acana.jpg",
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              Expanded(
+                                  flex: 1, child: Text("Acana Kedi Mamaları")),
+                              Expanded(
+                                flex: 1,
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                        flex: 1,
+                                        child: Icon(FontAwesomeIcons.solidHeart,
+                                            size: 20)),
+                                    Expanded(
+                                      flex: 4,
+                                      child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          primary:
+                                              Color.fromARGB(255, 170, 77, 19),
+                                        ),
+                                        child: Container(
+                                          height: 12,
+                                          width: 40,
+                                          child: Text(
+                                            "Hepsi",
+                                            style: TextStyle(fontSize: 10),
+                                          ),
+                                        ),
+                                        onPressed: () {},
                                       ),
                                     ),
-                                    onPressed: () {},
-                                  ),
+                                  ],
                                 ),
-                              ],
-                            )
-                          ],
+                              )
+                            ],
+                          ),
                         ),
                       ),
-                      Container(
-                        margin: EdgeInsets.all(5),
-                        height: 200,
-                        width: 150,
-                        child: Column(
-                          children: [
-                            Image.asset(
-                              "lib/resimler/kedimamasi/royalcanin.jpg",
-                              fit: BoxFit.cover,
-                            ),
-                            Text("Royal Canin Kedi Mamaları"),
-                            Row(
-                              children: [
-                                Expanded(
-                                    flex: 1,
-                                    child: Icon(FontAwesomeIcons.solidHeart,
-                                        size: 20)),
-                                Expanded(
-                                  flex: 4,
-                                  child: ElevatedButton(
-                                    style: ElevatedButton.styleFrom(
-                                      primary: Color.fromARGB(255, 170, 77, 19),
-                                    ),
-                                    child: Container(
-                                      height: 12,
-                                      width: 40,
-                                      child: Text(
-                                        "Hepsi",
-                                        style: TextStyle(fontSize: 10),
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.all(5),
+                          height: 200,
+                          child: Column(
+                            children: [
+                              Expanded(
+                                flex: 5,
+                                child: Image.asset(
+                                  "lib/resimler/kedimamasi/nd.jpg",
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              Expanded(
+                                  flex: 1, child: Text("N&D Kedi Mamaları")),
+                              Expanded(
+                                flex: 1,
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                        flex: 1,
+                                        child: Icon(FontAwesomeIcons.solidHeart,
+                                            size: 20)),
+                                    Expanded(
+                                      flex: 4,
+                                      child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          primary:
+                                              Color.fromARGB(255, 170, 77, 19),
+                                        ),
+                                        child: Container(
+                                          height: 12,
+                                          width: 40,
+                                          child: Text(
+                                            "Hepsi",
+                                            style: TextStyle(fontSize: 10),
+                                          ),
+                                        ),
+                                        onPressed: () {},
                                       ),
                                     ),
-                                    onPressed: () {},
-                                  ),
+                                  ],
                                 ),
-                              ],
-                            )
-                          ],
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Expanded(
+                        child: Container(
+                          height: 200,
+                          margin: EdgeInsets.all(5),
+                          child: Column(
+                            children: [
+                              Expanded(
+                                flex: 5,
+                                child: Image.asset(
+                                  "lib/resimler/kedimamasi/acana.jpg",
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              Expanded(
+                                  flex: 1, child: Text("Acana Kedi Mamaları")),
+                              Expanded(
+                                flex: 1,
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                        flex: 1,
+                                        child: Icon(FontAwesomeIcons.solidHeart,
+                                            size: 20)),
+                                    Expanded(
+                                      flex: 4,
+                                      child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          primary:
+                                              Color.fromARGB(255, 170, 77, 19),
+                                        ),
+                                        child: Container(
+                                          height: 12,
+                                          width: 40,
+                                          child: Text(
+                                            "Hepsi",
+                                            style: TextStyle(fontSize: 10),
+                                          ),
+                                        ),
+                                        onPressed: () {},
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.all(5),
+                          height: 200,
+                          child: Column(
+                            children: [
+                              Expanded(
+                                flex: 5,
+                                child: Image.asset(
+                                  "lib/resimler/kedimamasi/nd.jpg",
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              Expanded(
+                                  flex: 1, child: Text("N&D Kedi Mamaları")),
+                              Expanded(
+                                flex: 1,
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                        flex: 1,
+                                        child: Icon(FontAwesomeIcons.solidHeart,
+                                            size: 20)),
+                                    Expanded(
+                                      flex: 4,
+                                      child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          primary:
+                                              Color.fromARGB(255, 170, 77, 19),
+                                        ),
+                                        child: Container(
+                                          height: 12,
+                                          width: 40,
+                                          child: Text(
+                                            "Hepsi",
+                                            style: TextStyle(fontSize: 10),
+                                          ),
+                                        ),
+                                        onPressed: () {},
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Expanded(
+                        child: Container(
+                          height: 200,
+                          margin: EdgeInsets.all(5),
+                          child: Column(
+                            children: [
+                              Expanded(
+                                flex: 5,
+                                child: Image.asset(
+                                  "lib/resimler/kedimamasi/acana.jpg",
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              Expanded(
+                                  flex: 1, child: Text("Acana Kedi Mamaları")),
+                              Expanded(
+                                flex: 1,
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                        flex: 1,
+                                        child: Icon(FontAwesomeIcons.solidHeart,
+                                            size: 20)),
+                                    Expanded(
+                                      flex: 4,
+                                      child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          primary:
+                                              Color.fromARGB(255, 170, 77, 19),
+                                        ),
+                                        child: Container(
+                                          height: 12,
+                                          width: 40,
+                                          child: Text(
+                                            "Hepsi",
+                                            style: TextStyle(fontSize: 10),
+                                          ),
+                                        ),
+                                        onPressed: () {},
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.all(5),
+                          height: 200,
+                          child: Column(
+                            children: [
+                              Expanded(
+                                flex: 5,
+                                child: Image.asset(
+                                  "lib/resimler/kedimamasi/nd.jpg",
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              Expanded(
+                                  flex: 1, child: Text("N&D Kedi Mamaları")),
+                              Expanded(
+                                flex: 1,
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                        flex: 1,
+                                        child: Icon(FontAwesomeIcons.solidHeart,
+                                            size: 20)),
+                                    Expanded(
+                                      flex: 4,
+                                      child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          primary:
+                                              Color.fromARGB(255, 170, 77, 19),
+                                        ),
+                                        child: Container(
+                                          height: 12,
+                                          width: 40,
+                                          child: Text(
+                                            "Hepsi",
+                                            style: TextStyle(fontSize: 10),
+                                          ),
+                                        ),
+                                        onPressed: () {},
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ],
